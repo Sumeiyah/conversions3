@@ -1,0 +1,78 @@
+/* welcome.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-image: url('../images/image1.png'); /* Adjust the path based on the folder structure */
+
+    background-size: 200% 300%;
+    animation: BackgroundGradient 15s ease infinite;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+@keyframes BackgroundGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    color:#181717
+}
+
+.welcome-message {
+    font-size: 2rem;
+    margin: 0.5em 0;
+}
+
+.welcome-description {
+    margin-bottom: 2em;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.welcome-button {
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.welcome-button:hover,
+.welcome-button:focus {
+    background-color: #181717;
+    color: #fff;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 1.5rem;
+    }
+
+    .welcome-description {
+        font-size: 1rem;
+    }
+}
