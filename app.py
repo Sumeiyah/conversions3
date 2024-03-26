@@ -44,5 +44,5 @@ def convert_route():
         app.logger.error(f"Unexpected error during conversion: {e}")
         return jsonify(error='Internal server error'), 500
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
