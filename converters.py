@@ -12,6 +12,13 @@ from wand.image import Image as WandImage
 
 UPLOAD_FOLDER = 'uploads/'
 
+def check_tools_installed():
+    if not which('libreoffice') or not which('pdftoppm') or not which('pdfinfo'):
+        raise EnvironmentError('Required tools are not installed.')
+
+check_tools_installed()
+
+
 def convert_file(conversion_type, filepath):
     filename, file_extension = os.path.splitext(filepath)
     output_extension = get_output_extension(conversion_type)
